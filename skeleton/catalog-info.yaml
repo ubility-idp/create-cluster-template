@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.project_name | dump }}
+  description: ${{ values.description | dump }}
+  annotations:
+    backstage.io/techdocs-ref: dir:.
+  infrastructure: aks
+  tags:
+    - aks
+  links:
+    - url: https://portal.azure.com/#@testsrack.com/resource/subscriptions/5942567f-8e9e-4747-a45f-c44f2f121646/resourceGroups/BackstageDeployments/providers/Microsoft.ContainerService/managedClusters/${{ values.project_name | lower }}/overview
+      title: View AKS on Azure Portal
+      icon: dashboard
+      type: aks-cluster
+spec:
+  type: AKS
+  lifecycle: created
+  owner: ${{ values.owner | dump }}
