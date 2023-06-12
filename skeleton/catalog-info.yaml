@@ -1,7 +1,7 @@
 apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
-  name: ${{ values.project_name | replace(' ','-') }}
+  name: ${{ values.project_name | replace(' ','') }}
   description: ${{ values.description | dump }}
   annotations:
     backstage.io/techdocs-ref: dir:.
