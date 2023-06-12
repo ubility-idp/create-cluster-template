@@ -1,5 +1,5 @@
 resource "helm_release" "ingress" {
-  depends_on       = [azurerm_role_assignment.role_acrpull]
+  depends_on       = [null_resource.get_creds]
   name             = "${var.prefix}-nginx"
   repository       = "https://kubernetes.github.io/ingress-nginx/"
   chart            = "ingress-nginx"
