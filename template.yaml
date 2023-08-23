@@ -17,12 +17,11 @@ spec:
     - title: Project Info
       required:
         - project_name
-        - owner
       properties:
         project_name:
           title: Project Name
           type: string
-          description: Unique name of the project which will also be used as the K8s cluster name
+          description: Name of the project to be used in the software catalog
         description:
           title: Description
           type: string
