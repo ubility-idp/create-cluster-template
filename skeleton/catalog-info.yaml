@@ -5,6 +5,7 @@ metadata:
   description: ${{ values.description | dump }}
   annotations:
     backstage.io/techdocs-ref: dir:.
+    ubilityai.com/cluster-name: ${{ values.project_name | lower }}
   infrastructure: aks
   tags:
     - aks
