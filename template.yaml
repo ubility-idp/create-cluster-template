@@ -75,11 +75,11 @@ spec:
           container_registry: ${{ steps.exportVals.output.container_registry }}
           resource_group: ${{ steps.exportVals.output.resource_group }}
 
-    # - id: applyTerraform
-    #   name: Apply Terraform
-    #   action: ubility:terraform:apply
-    #   input:
-    #     cluster_name: ${{ parameters.project_name | lower }}
+    - id: applyTerraform
+      name: Apply Terraform
+      action: ubility:terraform:apply
+      input:
+        cluster_name: ${{ parameters.project_name | lower }}
 
     - id: publish
       name: Publish
