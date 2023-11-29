@@ -74,6 +74,7 @@ spec:
           owner: ${{ parameters.owner }}
           container_registry: ${{ steps.exportVals.output.container_registry }}
           resource_group: ${{ steps.exportVals.output.resource_group }}
+          subscription_id: ${{ steps.exportVals.output.azure_subscription_id}}
 
     - id: applyTerraform
       name: Apply Terraform

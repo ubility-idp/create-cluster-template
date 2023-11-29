@@ -10,7 +10,7 @@ metadata:
   tags:
     - aks
   links:
-    - url: https://portal.azure.com/#@testsrack.com/resource/subscriptions/5942567f-8e9e-4747-a45f-c44f2f121646/resourceGroups/BackstageDeployments/providers/Microsoft.ContainerService/managedClusters/${{ values.project_name | lower }}/overview
+    - url: https://portal.azure.com/#@testsrack.com/resource/subscriptions/${{ values.subscription_id }}/resourceGroups/BackstageDeployments/providers/Microsoft.ContainerService/managedClusters/${{ values.project_name | lower }}/overview
       title: View AKS on Azure Portal
       icon: dashboard
       type: aks-cluster
