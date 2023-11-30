@@ -23,6 +23,7 @@ spec:
         project_name:
           title: Project Name
           type: string
+          pattern: "^[a-zA-Z0-9](?:[a-zA-Z0-9_-]*[a-zA-Z0-9])?$"
           description: Name of the project to be used in the software catalog
         description:
           title: Description
