@@ -5,12 +5,12 @@ metadata:
   description: ${{ values.description | dump }}
   annotations:
     backstage.io/techdocs-ref: dir:.
-    ubilityai.com/cluster-name: ${{ values.project_name | lower }}
+    ubilityai.com/cluster-name: ${{ values.project_name | replace(' ','') | lower }}
   infrastructure: aks
   tags:
     - aks
   links:
-    - url: https://portal.azure.com/#@testsrack.com/resource/subscriptions/${{ values.subscription_id }}/resourceGroups/${{ values.resource_group }}/providers/Microsoft.ContainerService/managedClusters/${{ values.project_name | lower }}/overview
+    - url: https://portal.azure.com/#@testsrack.com/resource/subscriptions/${{ values.subscription_id }}/resourceGroups/${{ values.resource_group }}/providers/Microsoft.ContainerService/managedClusters/${{ values.project_name | replace(' ','') | lower }}/overview
       title: View AKS on Azure Portal
       icon: dashboard
       type: aks-cluster

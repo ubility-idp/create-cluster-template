@@ -17,6 +17,8 @@ spec:
     - title: Project Info
       required:
         - project_name
+        - description
+        - owner
       properties:
         project_name:
           title: Project Name
