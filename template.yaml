@@ -82,7 +82,7 @@ spec:
       name: Apply Terraform
       action: ubility:terraform:apply
       input:
-        cluster_name: ${{ parameters.project_name | lower }}
+        cluster_name: ${{ parameters.project_name | lower | replace(" ", "" ) }}
 
     - id: publish
       name: Publish

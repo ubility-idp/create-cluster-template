@@ -34,7 +34,7 @@ variable "prefix" {
 
 variable "kubernetes_cluster_name" {
   type    = string
-  default = "${{ values.project_name | lower | replace(' ','-') }}"
+  default = "${{ values.project_name | lower | replace(' ','') }}"
 }
 
 variable "kubernetes_cluster_location" {
@@ -44,7 +44,7 @@ variable "kubernetes_cluster_location" {
 
 variable "kubernetes_cluster_dns_prefix" {
   type    = string
-  default = "${{ values.project_name | lower | replace(' ','-') }}"
+  default = "${{ values.project_name | lower | replace(' ','') }}"
 }
 
 variable "acr_name" {
