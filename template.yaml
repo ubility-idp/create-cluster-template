@@ -68,7 +68,7 @@ spec:
         copyWithoutRender:
           - .github/workflows/*
         values:
-          project_name: ${{ parameters.project_name }}
+          project_name: ${{ parameters.project_name | lower | replace(" ", "")}}
           description: ${{ parameters.description }}
           region: ${{ parameters.region_size.region }}
           size: ${{ parameters.region_size.size }}
